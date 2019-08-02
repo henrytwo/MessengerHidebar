@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script defer src="thirdParty/jquery-3.3.1.slim.min.js"></script>
+    <script defer src="thirdParty/sweetalert.min.js"></script>
+    <script defer src="thirdParty/firebase-app.js"></script>
+    <script defer src="thirdParty/firebase-auth.js"></script>
+    <script defer src="thirdParty/firebase-firestore.js"></script>
+    <script defer src="popup.js"></script>
+
+</head>
+<body>
+
+<div style="width: 150px; height: 100px">
+
+
+
+    <div id = "titleText" style = "display: table">
+        <h1 style = "font-size: 17px; display: inline; top: 20px">SeizeControl</h1>
+      <!-- img src logo here -->
+        <img src = icons/moreshit.png height = "30" weight = "30" style = "float: left; display: inline;" hspace = "8" ></img>
+    </div>
+
+
+    <div style = "margin-top: 10px" >
+
+        <h2 style = "font-size: 14px; display: inline-block; float: left; padding: 0; margin: 0">Enable</h2>
+
+        <div id = "toggleSwitch" style = "display: inline; float: right" >
+
+        <label class="switch">
+            <input id="enable" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+
+        </div>
+    </div>
+
+
+<!--<div id="autoskipOption" style="display: table; float: left; margin-top: 10px">-->
+    <!--<label class="container"> <h2 style = "font-size: 14px; padding: 0; margin: 0; display: inline-block; vertical-align: right">Autoskip</h2>-->
+            <!--<input type="radio" checked="checked" name="radio" style = "display: inline-block; vertical-align: left">-->
+            <!--<span class="checkmark"></span>-->
+        <!--</label>-->
+    <!--</div>-->
+
+    <!--<div id = "promptOption" style="display: table; float: left; margin-top: 5px">-->
+    <!--<label class="container"><h2 style = "font-size: 14px; vertical-align:right; display: inline-block; padding: 0; margin: 0">Prompt</h2>-->
+  <!--<input type="radio" name="radio" style = "vertical-align: left; display: inline-block">-->
+  <!--<span class="checkmark"></span>-->
+  <!--</label>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+     <div id = "autoSkipOption" style = "margin-top: 40px"  >
+
+        <h2 style = "font-size: 14px; display: inline-block; float: left; padding: 0; margin: 0">Autoskip</h2>
+
+        <div id = "toggleSwitch" style = "display: inline; float: right" >
+
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+
+        </div>
+    </div>
+
+<!--<div id = "help" style = "margin-top: 70px">-->
+   <!--<h2 style = "font-size: 14px; vertical-align:right; display: inline-block; padding: 0; margin: 0">Help</h2>-->
+<!--</div>-->
+
+<!--<div id = "feedback" style = "margin-top:10px">-->
+   <!--<h2 style = "font-size: 14px; vertical-align:right; display: inline-block; padding: 0; margin: 0">Feedback</h2>-->
+<!--</div>-->
+</div>
+
+</body>
+</html>
+
+
+
+    <style>
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 17px;
+    }
+
+    .switch input {display:none;}
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      /*height and width of inner circle*/
+      height: 13px;
+      width: 13px;
+      /*positioning of circle within switch*/
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+
+      /*add smooth slide*/
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    /*changes the color to grey when slide*/
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #2196F3;
+    }
+
+    /*moves inner white dot left and right */
+    input:checked + .slider:before {
+      -webkit-transform: translateX(13px);
+      -ms-transform: translateX(13px);
+      transform: translateX(13px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 17px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+    </style>

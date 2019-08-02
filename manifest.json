@@ -1,0 +1,35 @@
+{
+  "name": "MessengerHidebar",
+  "version": "1.0",
+  "description": "Hides sidebar so that people can't snoop",
+  "permissions": ["activeTab", "storage","tabs", "http://*/*", "https://*/*"],
+  "options_page": "options.html",
+  "background": {
+    "scripts": ["thirdParty/firebase-app.js", "thirdParty/firebase-auth.js", "thirdParty/firebase-firestore.js", "thirdParty/jquery-3.3.1.slim.min.js", "thirdParty/sweetalert.min.js", "background.js"],
+    "persistent": false
+  },
+  "icons":{
+    "512": "icons/512.png",
+    "256": "icons/256.png",
+    "128": "icons/128.png",
+    "64": "icons/64.png",
+    "32": "icons/moreshit.png"
+  },
+  "content_scripts" : [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js" : [
+        "content.js"
+      ],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "page_action": {
+    "default_icon": "icons/moreshit.png",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
